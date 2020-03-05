@@ -12,7 +12,9 @@ suite = unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestLogin))
 suite.addTest(unittest.makeSuite(TestEmployee))
 # - 4 定义报告的名称
-report_path = os.path.dirname(os.path.abspath(__file__)) + "/report/ihrm{}.html".format(time.strftime('%Y%m%d %H%M%S'))
+# report_path = os.path.dirname(os.path.abspath(__file__)) + "/report/ihrm{}.html".format(time.strftime('%Y%m%d %H%M%S'))
+# 如果要在jenkins当中引入这个报告，那么需要把时间删掉
+report_path = os.path.dirname(os.path.abspath(__file__)) + "/report/ihrm.html"
 # - 5 打开报告，使用HTMLTestRunner_PY3执行测试套件，生成测试报告
 with open(report_path, mode='wb') as f:
     # 初始化HTMLTestRunner_PY3
