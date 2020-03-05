@@ -22,3 +22,5 @@ with open(report_path, mode='wb') as f:
     runner = HTMLTestRunner(f, verbosity=2, title="人力资源管理系统接口测试报告", description="这是项目实战的报告")
     # 运行测试套件
     runner.run(suite)
+
+print("Hello World")
